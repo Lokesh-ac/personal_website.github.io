@@ -1,0 +1,37 @@
+
+$(function(){
+  $(".expmsg").hide();
+$(".msg").hide();
+$(".contactmsg").hide();
+$(".skillsmsg").hide();
+$(".myquote").hide();
+$("#greet").hide();
+$("#greetline").hide();
+$(".aboutmsg").hide();
+$("#greet").show(500);
+$("#greetline").delay(500).slideDown(1000);
+$(".msg").delay(1800).slideDown(1000);
+$(".myquote").delay(1500).slideDown(2500);
+$("#close").click(function(){
+  $("#greet").hide();
+});
+$(".aboutmsg").fadeIn(1000);
+$(".expmsg").fadeIn(1000);
+$(".skillsmsg").fadeIn(1000);
+$(".contactmsg").fadeIn(1000);
+$("#submit").click(function(){
+  $("#submit").hide();
+  $("#firstname").hide();
+  $("#lastname").hide();
+  $("#phno").hide();
+  $("#weburl").hide();
+  $("#email").hide();
+  $("#reason").hide();
+  $("#compsize").hide();
+  $(".contactmsg").animate({
+    paddingTop:"50px",
+    height:"100px"
+  });
+  $(".contactmsg").html("<p>Details submitted succesfully</p>");
+});
+});
